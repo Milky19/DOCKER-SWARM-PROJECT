@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  python:
+    image: hanvitha/pythonlife:v2
+    ports:
+      - "82:80"
+    deploy:
+      replicas: 3
+  movies:
+    image: hanvitha/pymymovies:v2
+    ports: 
+      - "83:80"
+    deploy:
+      replicas: 3
+  dth:
+    image: hanvitha/pymydth:v2
+    ports:
+      - "84:80"
+    deploy:
+      replicas: 3
+
